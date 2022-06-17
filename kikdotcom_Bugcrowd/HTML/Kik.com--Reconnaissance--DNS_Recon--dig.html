@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>dig</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>dig</h1><br/><strong>Command 1 : </strong><br /><br />dig kik.com<br /><br /><br /><strong>Output : </strong><br /><br />; &lt;&lt;&gt;&gt; DiG 9.16.1-Ubuntu &lt;&lt;&gt;&gt; kik.com<br />;; global options: +cmd<br />;; Got answer:<br />;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 15392<br />;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1<br /><br />;; OPT PSEUDOSECTION:<br />; EDNS: version: 0, flags:; udp: 65494<br />;; QUESTION SECTION:<br />;kik.com.			IN	A<br /><br />;; ANSWER SECTION:<br />kik.com.		53	IN	A	13.35.128.115<br />kik.com.		53	IN	A	13.35.128.80<br />kik.com.		53	IN	A	13.35.128.104<br />kik.com.		53	IN	A	13.35.128.103<br /><br />;; Query time: 0 msec<br />;; SERVER: 127.0.0.53#53(127.0.0.53)<br />;; WHEN: Fri Jun 17 18:02:17 UTC 2022<br />;; MSG SIZE  rcvd: 100<br /><br /><br /><strong>Command 2 : </strong><br /><br />dig -t ns kik.com<br /><br /><br /><strong>Output : </strong><br /><br />; &lt;&lt;&gt;&gt; DiG 9.16.1-Ubuntu &lt;&lt;&gt;&gt; -t ns kik.com<br />;; global options: +cmd<br />;; Got answer:<br />;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 23008<br />;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1<br /><br />;; OPT PSEUDOSECTION:<br />; EDNS: version: 0, flags:; udp: 65494<br />;; QUESTION SECTION:<br />;kik.com.			IN	NS<br /><br />;; ANSWER SECTION:<br />kik.com.		6852	IN	NS	ns-1851.awsdns-39.co.uk.<br />kik.com.		6852	IN	NS	ns-1518.awsdns-61.org.<br />kik.com.		6852	IN	NS	ns-707.awsdns-24.net.<br />kik.com.		6852	IN	NS	ns-59.awsdns-07.com.<br /><br />;; Query time: 0 msec<br />;; SERVER: 127.0.0.53#53(127.0.0.53)<br />;; WHEN: Fri Jun 17 18:02:47 UTC 2022<br />;; MSG SIZE  rcvd: 172<br /><br /><br /><strong>Command 3 : </strong><br /><br />dig axfr kik.com @ns-1851.awsdns-39.co.uk<br /><br /><br /><strong>Output : </strong><br /><br />;; communications error to 2600:9000:5307:3b00::1#53: connection reset<br /><br /><br /></div>
+</body>
+</html>
